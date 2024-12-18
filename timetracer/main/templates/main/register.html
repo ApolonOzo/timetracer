@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Регистрация {% endblock %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap&subset=cyrillic,latin" rel="stylesheet">
+
+{% block content %}
+
+     <div class="container">
+        <div class="logo">Регистрация</div>
+        <form>
+            <input type="text" class="input-field" placeholder="имя пользователя">
+            <input type="email" class="input-field" placeholder="email">
+            <input type="password" class="input-field" placeholder="пароль">
+            <input type="password" class="input-field" placeholder="подтвердите пароль">
+            <button type="submit" class="login-btn">Зарегистрироваться</button>
+        </form>
+        <a href="welcome" class="register-link">Уже есть аккаунт</a>
+    </div>
+
+{% endblock %}

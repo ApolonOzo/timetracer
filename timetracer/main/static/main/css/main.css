@@ -1,0 +1,71 @@
+body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url("/static/main/img/fon.jpg");
+             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .login-btn {
+            width: 75%;
+            padding: 12px;
+            margin: 20px auto;
+            border: 2px solid #8a2be2;
+            border-radius: 25px;
+            background: white;
+            color: #8a2be2;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Kanit', sans-serif;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #8a2be2;
+            color: white;
+        }
+
+        .register-link {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            margin-top: 180px;
+            display: block;
+
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }

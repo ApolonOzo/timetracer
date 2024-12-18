@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Timetracer {% endblock %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap&subset=cyrillic,latin" rel="stylesheet">
+
+{% block content %}
+
+    <div class="container">
+        <div class="logo">Вход</div>
+        <form>
+            <input type="text" class="input-field" placeholder="логин">
+            <input type="password" class="input-field" placeholder="пароль">
+            <button type="submit" class="login-btn">Войти</button>
+        </form>
+        <a href="register" class="register-link">Регистрация</a>
+    </div>
+
+{% endblock %}

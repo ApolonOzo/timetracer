@@ -13,4 +13,4 @@ class Person(models.Model):
 
     class Meta:
         verbose_name = 'Пользователь'
-        verbose_name_pluar = 'Пользователи'
+        # verbose_name_pluar = 'Пользователи'

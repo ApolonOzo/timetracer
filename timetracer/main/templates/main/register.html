@@ -2,22 +2,48 @@
 
 {% block title %} Регистрация {% endblock %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap&subset=cyrillic,latin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Time Tracker</title>
 
 {% block content %}
 
      <div class="container">
-        <div class="logo">Регистрация</div>
-        <form>
-            <input type="text" class="input-field" placeholder="имя пользователя">
-            <input type="email" class="input-field" placeholder="email">
-            <input type="password" class="input-field" placeholder="пароль">
-            <input type="password" class="input-field" placeholder="подтвердите пароль">
-            <button type="submit" class="login-btn">Зарегистрироваться</button>
-        </form>
-        <a href="/" class="register-link">Уже есть аккаунт</a>
-    </div>
+       <header>
+           <div class="logo">
+               <span class="icon-clock"></span>
+               <img class="img-logo" src="static/main/img/v21_16.png" alt="">
+           </div>
+       </header>
+        <main class="registration-form">
+           <p class="step-indicator">Шаг 1 из 2</p>
+           <h2>Создать учетную запись</h2>
+
+           <p class="registration-info">
+               Зарегистрируйтесь с помощью электронной почты
+               <span class="login-link">У вас уже есть учетная запись? <a href="welcome">Войти</a></span>
+           </p>
+            <form>
+               <div class="form-group">
+                   <input type="text" id="fullname" name="fullname" placeholder="Ф.И.О." required>
+               </div>
+                <div class="form-group">
+                   <input type="email" id="email" name="email" placeholder="Адрес электронной почты" required>
+               </div>
+                <div class="form-group">
+                   <input type="password" id="password" name="password" placeholder="Пароль" required>
+               </div>
+                <div class="form-group">
+                   <select id="position" name="position" required>
+                       <option value="" disabled selected>Должность</option>
+                       <option value="1">Руководитель</option>
+                       <option value="2">Сотрудник</option>
+                       <option value="3">Менеджер</option>
+                   </select>
+               </div>
+                <button type="submit" class="submit-btn">Продолжить</button>
+           </form>
+       </main>
+   </div>
 
 {% endblock %}

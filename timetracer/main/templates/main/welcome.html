@@ -1,21 +1,40 @@
 {% extends 'main/layout.html' %}
 
-{% block title %} Timetracer {% endblock %}
+{% block title %} Time Tracker - Вход {% endblock %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap&subset=cyrillic,latin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
 {% block content %}
 
-    <div class="container">
-        <div class="logo">Вход</div>
-        <form>
-            <input type="text" class="input-field" placeholder="логин">
-            <input type="password" class="input-field" placeholder="пароль">
-            <button type="submit" class="login-btn">Войти</button>
-        </form>
-        <a href="register" class="register-link">Регистрация</a>
+    <div class="dis">
+        <div class="container">
+            <div class="logo">
+                <img class="img-logo" src="static/main/img/v21_16.png" alt="">
+            </div>
+
+            <div class="registration-form">
+                <p class="step-indicator">Шаг 2 из 2</p>
+                <h2>Войти</h2>
+
+                <form>
+                    <div class="form-group">
+                        <input type="email" placeholder="Адрес электронной почты" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+
+                    <a href="password" class="login-link">Сброс пароля</a>
+
+                    <button type="submit" class="submit-btn"> Продолжить </button>
+
+                    <div class="login-link">
+                        <p>Новый пользователь? <a href="register">Создать учетную запись</a></p>
+                    </div>
+                </form>
+            </div>
+    </div>
     </div>
 
 {% endblock %}

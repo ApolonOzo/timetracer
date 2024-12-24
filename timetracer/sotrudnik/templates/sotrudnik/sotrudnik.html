@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Time Tracker {% endblock %}
+
+{% block content %}
+
+     <img class="img-logo" src="static/main/img/v21_16.png" alt="">
+
+    <div class="navigation">
+        <div>📊</div>
+        <div>🏠</div>
+        <div>🏆</div>
+    </div>
+
+    <div class="task-selection">
+        <select id="task" name="task" required>
+            <option value="" disabled selected>Выберите макет</option>
+            <option value="1">Макет 1</option>
+            <option value="2">Макет 2</option>
+            <option value="3">Макет 3</option>
+        </select>
+    </div>
+
+    <div class="task-selection">
+        <select id="task" name="task" required>
+            <option value="" disabled selected>Выберите задачу</option>
+            <option value="1">Задача 1</option>
+            <option value="2">Задача 2</option>
+            <option value="3">Задача 3</option>
+        </select>
+    </div>
+
+    <a href="sotrudnik" class="btn-continue">Продолжить</a>
+
+{% endblock %}

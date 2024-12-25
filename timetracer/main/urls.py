@@ -7,5 +7,5 @@ urlpatterns = [
     path('welcome', views.welcome),
     path('register', views.register),
     path('password', views.password),
-    path('welcome', include('sotrudnik.urls'))
+    path('sotrudnik', include('sotrudnik.urls'))
 ]

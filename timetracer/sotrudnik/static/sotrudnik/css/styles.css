@@ -1,0 +1,111 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.fc-event {
+    background-color: #4CAF50; /* Зеленый цвет для событий */
+    color: white; /* Белый текст */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Закругленность */
+    padding: 10px; /* Отступы внутри события */
+}
+
+.fc-event:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+}
+
+.fc-toolbar {
+    padding: 10px;
+    background: #008000; /* Синий цвет заголовка календаря */
+    color: white; /* Белый текст */
+}
+
+.fc-title {
+    font-weight: bold; /* Жирный шрифт для заголовка события */
+}
+
+.fc-day-number {
+    font-weight: bold; /* Жирный шрифт для номера дня */
+    color: #4CAF50; /* Цвет для номера дня */
+}
+
+
+        .btn {
+  border: none;
+  font-family: 'Lato';
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+  padding: 25px 60px 25px 120px;
+  margin: 0;
+  padding: 20px 0;
+  height: auto;
+  width: 100%;
+}
+
+.btn-sep:before {
+  background: rgba(0,0,0,0.15);
+}
+
+/* Button 1 */
+.btn-1 {
+  background: #3498db;
+  color: #fff;
+}
+
+.btn-1:hover {
+  background: #2980b9;
+}
+

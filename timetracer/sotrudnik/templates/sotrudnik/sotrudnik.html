@@ -1,10 +1,35 @@
 {% extends 'main/layout2.html' %}
 
+
 {% block title %} Time Tracker {% endblock %}
 
 {% block content %}
 
      <img class="img-logo" src="static/main/img/v21_16.png" alt="">
+
+    <div class="header">
+        <div class="info">
+            <div class="profile-pic"></div>
+        <div>
+            <h2>Петров Иван Алексеевич</h2>
+            <p class="status">✧ Практикант</p>
+            <p>Ставка: 0₽/час</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="timer">00:00:00</div>
+
+    <div class="start-button">
+        <span>▶ Нажмите чтобы начать</span>
+    </div>
+
+    <div class="stats-box">
+        <h3>Статистика времени</h3>
+        <p>Всего отработано часов: 0</p>
+        <p>Заработано: 0₽</p>
+        <p>Почасовая ставка: 0₽</p>
+    </div>
 
     <div class="navigation">
         <div>📊</div>
@@ -12,24 +37,40 @@
         <div>🏆</div>
     </div>
 
-    <div class="task-selection">
-        <select id="task" name="task" required>
-            <option value="" disabled selected>Выберите макет</option>
-            <option value="1">Макет 1</option>
-            <option value="2">Макет 2</option>
-            <option value="3">Макет 3</option>
-        </select>
-    </div>
+    <script>
+        let timer;
+        let isRunning = false;
+        let seconds = 0;
 
-    <div class="task-selection">
-        <select id="task" name="task" required>
-            <option value="" disabled selected>Выберите задачу</option>
-            <option value="1">Задача 1</option>
-            <option value="2">Задача 2</option>
-            <option value="3">Задача 3</option>
-        </select>
-    </div>
+        document.querySelector('.start-button').addEventListener('click', function() {
+            if (!isRunning) {
+                startTimer();
+            } else {
+                stopTimer();
+            }
+        });
 
-    <a href="sotrudnik" class="btn-continue">Продолжить</a>
+        function startTimer() {
+            isRunning = true;
+            document.querySelector('.start-button span').textContent = '⏸ Нажмите чтобы остановить';
+            timer = setInterval(() => {
+                seconds++;
+                updateDisplay();
+            }, 1000);
+        }
 
+        function stopTimer() {
+            isRunning = false;
+            document.querySelector('.start-button span').textContent = '▶ Нажмите чтобы начать';
+            clearInterval(timer);
+        }
+
+        function updateDisplay() {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            document.querySelector('.timer').textContent =
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+    </script>
 {% endblock %}
